@@ -21,7 +21,7 @@ async function tempo(Request, Response) {
     // const resBarbers = await fetch("https://devbarberapi.globalsitepro.com/api/barbers?token="+user.token);
     // const barbers = await resBarbers.json();
 
-    response.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate');
+    // response.setHeader('Cache-Control', 's-maxage=10, stale-while-revalidate');
 
     Response.json({
         date: dynamicDate.toGMTString(),
