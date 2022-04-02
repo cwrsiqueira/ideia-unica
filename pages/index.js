@@ -27,10 +27,13 @@ function Home() {
         return string
       }
 
-    function converter() {
-        switch (convSelect) {
+    function converter(selection) {
+
+        // let paragraphs = text.match(/(\r\n|\n|\r)/gm)
+
+        switch (selection) {
             case 'toUpperCase':
-                setConvText(text.toUpperCase())
+                setConvText(text.toUpperCase())            
                 break;
             case 'toLowerCase':
                 setConvText(text.toLowerCase())
@@ -112,17 +115,36 @@ function Home() {
             <meta name="description" content="Conversor de Caracteres" />
             <link rel="icon" href="/favicon.ico" />
         </Head>
+
         <div className='menu'>
-            <div className='menu-left'>
-                <h1>Char Converter</h1>
-                <h2>Conversor de Caracteres</h2>
-            </div>
+            <h1>Char Converter</h1>
+            <h2><small>Conversor de Caracteres</small></h2>
         </div>
+
         <div className="container">
-            <h2>Digite ou cole o texto para converter</h2>
-            <textarea onChange={e=>setText(e.target.value)}></textarea>
-            <h3>Converter texto para:</h3>
-            <select className='select' onChange={(e)=>setConvSelect(e.target.value)}>
+
+            <div className='body-up'>
+
+                <div className='body-up-left'>
+                    <h2>Digite ou cole o texto para converter</h2>
+                    <textarea onChange={e=>setText(e.target.value)}></textarea>
+                </div>
+
+                <div className='body-up-right'>
+                    <h3>Converter texto para:</h3>
+                    <label htmlFor='toUpperCase'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='toUpperCase' value='toUpperCase' />TUDO MAIÚSCULO</label>
+                    <label htmlFor='toLowerCase'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='toLowerCase' value='toLowerCase' />tudo minúsculo</label>
+                    <label htmlFor='capitalize'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='capitalize' value='capitalize' />Só a primeira letra maiúscula</label>
+                    <label htmlFor='titleCase'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='titleCase' value='titleCase' />Todas As Primeiras Letras Maiúsculas</label>
+                    <label htmlFor='inverseTitleCase'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='inverseTitleCase' value='inverseTitleCase' />tODAS aS pRIMEIRAS lETRAS mINÚSCULAS</label>
+                    <label htmlFor='toggleLowerUpperCase'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='toggleLowerUpperCase' value='toggleLowerUpperCase' />aLtErNaR eNtRe mInÚsCuLaS e mAiÚsCuLaS</label>
+                    <label htmlFor='toggleUpperLowerCase'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='toggleUpperLowerCase' value='toggleUpperLowerCase' />AlTeRnAr EnTrE MaIúScUlAs E MiNúScUlAs</label>
+                    <label htmlFor='slug'><input type='radio' name='select' onClick={(e)=>converter(e.target.value)} id='slug' value='slug' />transformar-texto-em-slug</label>
+                </div>
+
+            </div>
+
+            {/* <select className='select' onChange={(e)=>setConvSelect(e.target.value)}>
                 <option value={'toUpperCase'}>TUDO MAIÚSCULO</option>
                 <option value={'toLowerCase'}>tudo minúsculo</option>
                 <option value={'capitalize'}>Só a primeira letra maiúscula</option>
@@ -132,16 +154,20 @@ function Home() {
                 <option value={'toggleUpperLowerCase'}>AlTeRnAr EnTrE MaIúScUlAs E MiNúScUlAs</option>
                 <option value={'slug'}>transformar-texto-em-slug</option>
             </select>
-            <button onClick={()=>converter()}>Clique para Converter</button>
+
+            <button onClick={()=>converter()}>Clique para Converter</button> */}
 
             <hr/>
 
-            {convText != '' &&
-                <>
-                    {/* <p>Parágrafos: {qtParags} - Palavras: {qtWords} - Caracteres: {qtLetters} </p> */}
-                    <div className='convertedText'>{convText}</div>
-                </>
-            }
+            <div className='body-down'>
+                {convText != '' &&
+                    <>
+                        {/* <p>Parágrafos: {qtParags} - Palavras: {qtWords} - Caracteres: {qtLetters} </p> */}
+                        <div className='convertedText'>{convText}</div>
+                    </>
+                }
+            </div>
+
         </div>
         </>
     )
