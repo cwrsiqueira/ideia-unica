@@ -127,8 +127,8 @@ function Home() {
                 <option value={'capitalize'}>Só a primeira letra maiúscula</option>
                 <option value={'titleCase'}>Todas As Primeiras Letras Maiúsculas</option>
                 <option value={'inverseTitleCase'}>tODAS aS pRIMEIRAS lETRAS mINÚSCULAS</option>
-                <option value={'toggleLowerUpperCase'}>Alternar entre minúsculas e maiúsculas</option>
-                <option value={'toggleUpperLowerCase'}>Alternar entre maiúsculas e minúsculas</option>
+                <option value={'toggleLowerUpperCase'}>aLtErNaR eNtRe mInÚsCuLaS e mAiÚsCuLaS</option>
+                <option value={'toggleUpperLowerCase'}>AlTeRnAr EnTrE MaIúScUlAs E MiNúScUlAs</option>
                 <option value={'slug'}>transformar-texto-em-slug</option>
             </select>
             <button onClick={()=>converter()}>Clique para Converter</button>
