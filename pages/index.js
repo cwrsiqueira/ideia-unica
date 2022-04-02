@@ -105,7 +105,7 @@ function Home() {
     return (
         <>
         <Head>
-            <meta property="og:url"                 content="https://thenspeak.com/" />
+            <meta property="og:url"                 content="https://charconverter.com/" />
             <meta property="og:type"                content="website" />
             <meta property="og:title"               content="char converter" />
             <meta property="og:description"         content="Conversor de Caracteres" />
