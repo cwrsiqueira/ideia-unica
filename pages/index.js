@@ -110,10 +110,10 @@ function Home() {
             <meta property="og:title"               content="char converter" />
             <meta property="og:description"         content="Conversor de Caracteres" />
             <meta property="og:tags"                content="character, char, converter, caracteres, conversor, uppercase, lowercase, maiusculas, minusculas, letras" />
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5865817649832793" crossorigin="anonymous"></script>
             <title>Char Converter</title>
             <meta name="description" content="Conversor de Caracteres" />
             <link rel="icon" href="/favicon.ico" />
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5865817649832793" crossorigin="anonymous"></script>
         </Head>
 
         <div className='menu'>
