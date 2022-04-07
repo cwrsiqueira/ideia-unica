@@ -113,7 +113,6 @@ function Home() {
             <title>Char Converter</title>
             <meta name="description" content="Conversor de Caracteres" />
             <link rel="icon" href="/favicon.ico" />
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5865817649832793" crossorigin="anonymous"></script>
         </Head>
 
         <div className='menu'>
